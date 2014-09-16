@@ -19,8 +19,19 @@
  * imagesLoaded - https://github.com/desandro/imagesloaded
  *
  */
- ;(function($) {
 
+;(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    // Node/CommonJS
+    factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function ($) {
   $.fn.imagefill = function(options) {
 
     var $container = this,
@@ -97,8 +108,8 @@
       }
       setTimeout(checkSizeChange, settings.throttle);
     }
-    
+
     return this;
   };
 
-}(jQuery));
+}));
