@@ -1,0 +1,9 @@
+{
+  "name": "jquery-imagefill",
+  "version": "1.0.0",
+  "dependencies": {
+    "components/jquery": "^1.0.0"
+  },
+  "main": "js/jquery-imagefill.js",
+  "scripts": ["js/jquery-imagefill.js"]
+}
